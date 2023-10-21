@@ -2,19 +2,18 @@ import {createRoot} from "react-dom/client";
 import 'bootstrap/dist/css/bootstrap.css';
 import "./style.css"; 
 import { cardData } from "./data";
+import { Counter } from "./count";
 // import gg from "./userdata";
 // console.log(gg);
 
-function gg(){
-  alert("hello wold");
-}
+
 function Greeting(){
   return (
     <section className="home">
       <div className="container">
         <div className="row">
           <Card cardData={cardData}/>
-          <button onClick={gg} className="btn btn-primary">button</button>
+          <Counter/>
         </div>
       </div>
     </section>
