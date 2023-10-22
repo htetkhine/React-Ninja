@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import "./style.css"; 
 import { cardData } from "./data";
 import { Counter } from "./count";
+import { GetData } from "./api";
 // import gg from "./userdata";
 // console.log(gg);
 
@@ -14,6 +15,7 @@ function Greeting(){
         <div className="row">
           <Card cardData={cardData}/>
           <Counter/>
+          <GetData />
         </div>
       </div>
     </section>
