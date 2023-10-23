@@ -3,3 +3,30 @@
     margin:0;
     box-sizing:border-box;
 }
+
+.home{
+    padding: 100px 0;
+}
+.home .card {
+    padding: 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.home .card img{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+}
+.home .card .range{
+    background: orange;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.home .card h3{
+    font-size: 25px;
+    font-family: 'roboto';
+    color: orange;
+    font-style: normal;
+}
