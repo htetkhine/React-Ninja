@@ -1,9 +1,11 @@
+import { StrictMode } from "react";
 import {createRoot} from "react-dom/client";
 import 'bootstrap/dist/css/bootstrap.css';
 import "./style.css"; 
 import { cardData } from "./data";
 import { Counter } from "./count";
 import { GetData } from "./api";
+import { Pokemon } from "./pokemon";
 // import gg from "./userdata";
 // console.log(gg);
 
@@ -13,9 +15,10 @@ function Greeting(){
     <section className="home">
       <div className="container">
         <div className="row">
-          <Card cardData={cardData}/>
+          {/* <Card cardData={cardData}/>
           <Counter/>
-          <GetData />
+          <GetData /> */}
+          <Pokemon />
         </div>
       </div>
     </section>
@@ -45,4 +48,8 @@ function Card({cardData}){
 
 const rootPath = document.getElementById("root");
 const root = createRoot(rootPath);
-root.render(<Greeting/>);
+root.render(
+  <StrictMode>
+    <Greeting/>
+  </StrictMode>
+);
