@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 export function Pokemon(){
+    const imgUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
     const[pokemonEntries,setPokemonEntries] = useState([]);
     const[next,setNext] = useState(null);
     const[previous,setPrevious] = useState(null);
@@ -24,9 +25,13 @@ export function Pokemon(){
     return(
         <>
             {pokemonEntries.map((entries , index)=>{
+                const indexKey = index + 1;
                 return(
-                    <div className="col-6" key={index}>
+                    <div className="col-md-4 col-6" key={indexKey}>
                         <div className="card">
+                            <div className="card-img">
+                                <img src={imgUrl+indexKey+".png"} alt={entries.name} className="img-fluid"/>
+                            </div>
                             <div className="card-title">
                             {entries.name}
                             </div>
